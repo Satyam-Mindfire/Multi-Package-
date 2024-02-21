@@ -28,8 +28,8 @@ let package = Package(
         .target(
             name: "MobileQuickLaunchKit",
             dependencies: [
-//                "MQLCore",
-//                "MQLCoreUI",
+                "MQLCore",
+                "MQLCoreUI",
                 .product(name: "FirebaseAnalytics", package: "firebase-ios-sdk"),
                 .product(name: "GoogleSignIn", package: "GoogleSignIn-iOS"),
                 .product(name: "GoogleSignInSwift", package: "GoogleSignIn-iOS")
@@ -37,8 +37,8 @@ let package = Package(
             ],
             resources: [.process("Assets/MobileQuickLaunchKitAssets.xcassets")]
         ),
-        .target(name: "MQLCore", path: "./MQLCore"),
-        .target(name: "MQLCoreUI", path: "./MQLCoreUI"),
+        .target(name: "MQLCore", path: "./MQLCore/Sources"),
+        .target(name: "MQLCoreUI", path: "./MQLCoreUI/Sources"),
         .testTarget(
             name: "MobileQuickLaunchKitTests",
             dependencies: ["MobileQuickLaunchKit"]),
