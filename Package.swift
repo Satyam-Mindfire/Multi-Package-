@@ -37,8 +37,8 @@ let package = Package(
             ],
             resources: [.process("Assets/MobileQuickLaunchKitAssets.xcassets")]
         ),
-        .target(name: "MQLCore"),
-        .target(name: "MQLCoreUI"),
+        .target(name: "MQLCore", path: "MQLCore/Sources"),
+        .target(name: "MQLCoreUI", path: "MQLCoreUI/Sources"),
         .testTarget(
             name: "MobileQuickLaunchKitTests",
             dependencies: ["MobileQuickLaunchKit"]),
